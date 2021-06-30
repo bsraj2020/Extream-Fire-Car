@@ -51,7 +51,7 @@ public class Button_manager : MonoBehaviour
    public void On_Reset_ButtonClick()
     {
        // Car.car.position = start_pos;
-       Car.car.position = Car.car.position+new Vector3(0f,2f,0.5f);
+       Car.car.position = Car.car.position+new Vector3(0f,2f,1f);
         Car.car.rotation  =  Quaternion.Euler(0f,0f,0f) ;
         //Car.car.velocity = Vector3.zero ;
         Car.car.rotation = starting_rot ;
@@ -71,7 +71,7 @@ public class Button_manager : MonoBehaviour
            //StartCoroutine("Turbo_Mode_On") ;      
         }
         else {
-            Car.MotorForce = 1000;
+            Car.MotorForce = Car.MotorForce_MAIN;
             Is_turbo_mode=false;
            Turbo_img.image.color = Color.white ;
             Car.Game_over_text.text="";   
